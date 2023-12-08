@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENSC351-Final Project</title>
+</head>
+<body>
+    <div id="myVariableDisplay">
+        <!-- This is where the myVariable value will be displayed -->
+    </div>
+
+    <script>
+        async function fetchAndUpdateVariable() {
+            try {
+                const response = await fetch('/getVariable');
+                const data = await response.json();
+                document.getElementById('myVariableDisplay').innerText = `myVariable: ${data.myVariable}`;
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        // Call the function to fetch data and update HTML on page load
+        fetchAndUpdateVariable();
+
+        // Poll for updates every few seconds (adjust the interval as needed)
+        setInterval(fetchAndUpdateVariable, 1000); // Fetch every 5 seconds
+    </script>
+</body>
+</html>
