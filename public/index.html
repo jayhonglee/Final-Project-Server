@@ -16,7 +16,7 @@
     <script>
         async function fetchAndUpdateVariable() {
             try {
-                const response = await fetch('/getVariable');
+                const response = await fetch('https://ensc351-fireandgas-detector.onrender.com/getVariable');
                 const data = await response.json();
                 document.getElementById('myVariableDisplay').innerText = `myVariable: ${data.myVariable}`;
             } catch (error) {
