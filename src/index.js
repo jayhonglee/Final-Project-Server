@@ -17,8 +17,8 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(alertRouter);
-
 app.use(express.static('public')); // Assuming index.html is in the 'public' directory
+
 
 app.listen(port, () => {
     console.log("Server is up on port " + port);
