@@ -32,7 +32,7 @@ router.post("/alert/test", async (req, res) => {
         }
 
         // Trigger email or other operations
-        testingEmail("ja34luv@gmail.com");
+        // testingEmail("ja34luv@gmail.com");
         
     } catch (e) {
         res.status(400).send(e);
