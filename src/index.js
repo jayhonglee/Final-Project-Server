@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 
 // Enable CORS for all routes
 const corsOptions = {
-    origin: process.env.ORIGIN,
+    origin: 'http://localhost:3000', 
     credentials: true, //access-control-allow-credentials:true
     optionSuccessStatus: 200,
 };
