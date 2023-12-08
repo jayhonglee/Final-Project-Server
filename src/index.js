@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 
 // Enable CORS for all routes
 const corsOptions = {
-    origin: 'http://localhost:3000', 
+    origin: 'https://grabpencil.com', 
     credentials: true, //access-control-allow-credentials:true
     optionSuccessStatus: 200,
 };
