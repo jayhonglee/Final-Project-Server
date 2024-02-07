@@ -11,9 +11,10 @@
 
 # Advanced Smoke Detector
 
-Welcome to the **backend code** repository of Advanced Smoke Detector.
+Welcome to the **backend code** repository of Advanced Smoke Detector. <br/>
+If you would like to check out the embedded software part code, please navigate to the [c code directory](./c%20code/).
 
--   This project was worked on by a team of four individuals, with each member contributing to different aspects. I was responsible for the backend development.
+-   This project was a collaborative effort involving a team of four individuals, with each member contributing to different aspects. Backend development was one of the parts I was responsible for.
 
 -   Initial Prototype Demo: <br/>
 ![Demo_Gif](./assets/animations/advanced%20smoke%20detector%20demo.gif)
