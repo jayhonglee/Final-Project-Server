@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/animations/minion.gif" alt="Minion_GIF" width="250" height="250">
+<img src="./assets/animations/minion.gif" alt="Minion_GIF" width="480" height="300">
 
 ![GitHub top language](https://img.shields.io/github/languages/top/jayhonglee/Final-Project-Server.svg?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jayhonglee/Final-Project-Server.svg?style=for-the-badge)
@@ -15,7 +15,7 @@ Welcome to the **backend code** repository of Advanced Smoke Detector.
 
 -   This project was worked on by a team of four individuals, with each member contributing to different aspects. I was responsible for the backend development.
 
--   Initial Prototype Demo:
+-   Initial Prototype Demo: <br/>
 ![Demo_Gif](./assets/animations/advanced%20smoke%20detector%20demo.gif)
 
 ## Description
@@ -105,7 +105,7 @@ Our experience with the Multi-Purpose Fire & Gas Detector project taught us valu
 
 -   Credit is attributed to the referenced document titled "[TMP36 Temperature Sensor Guide for BeagleBone Green](https://opencoursehub.cs.sfu.ca/bfraser/grav-cms/cmpt433/links/files/2022-student-howtos/TMP36TemperatureSensor.pdf)" for providing guidance and inspiration in the creation of this TMP36 Temperature Sensor Guide for BeagleBone Green.
 
--   <a href="https://giphy.com/gifs/regalmovies-minions-breaking-despicable-me-eImrJKnOmuBDmqXNUj" title="Breaking Despicable Me GIF By Regal">PBreaking Despicable Me GIF By Regal</a>
+-   <a href="https://giphy.com/gifs/regalmovies-minions-breaking-despicable-me-eImrJKnOmuBDmqXNUj" title="Breaking Despicable Me GIF By Regal">Breaking Despicable Me GIF By Regal</a>
 
 ## License
 
