@@ -1,130 +1,111 @@
 <div align="center">
 
-<img src="./assets/animations/pencil.gif" alt="Pencil_GIF" width="250" height="250">
-<div style="width:100%;height:0;padding-bottom:63%;position:relative;"><iframe src="https://giphy.com/embed/eImrJKnOmuBDmqXNUj" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/regalmovies-minions-breaking-despicable-me-eImrJKnOmuBDmqXNUj">via GIPHY</a></p>
+<img src="./assets/animations/minion.gif" alt="Minion_GIF" width="250" height="250">
 
-![GitHub top language](https://img.shields.io/github/languages/top/jayhonglee/GrabPencil-Backend.svg?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/jayhonglee/GrabPencil-Backend.svg?style=for-the-badge)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jayhonglee/GrabPencil-Backend.svg?style=for-the-badge)
-![GitHub license](https://img.shields.io/github/license/jayhonglee/GrabPencil-Backend.svg?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/jayhonglee/Final-Project-Server.svg?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/jayhonglee/Final-Project-Server.svg?style=for-the-badge)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jayhonglee/Final-Project-Server.svg?style=for-the-badge)
+![GitHub license](https://img.shields.io/github/license/jayhonglee/Final-Project-Server.svg?style=for-the-badge)
 
 </div>
 
-# GrabPencil ✏️
+# Advanced Smoke Detector
 
-Welcome to the **backend code** repository of GrabPencil.
+Welcome to the **backend code** repository of Advanced Smoke Detector.
 
--   If you're interested in the frontend code, you can find it [here](https://github.com/jayhonglee/GrabPencil-Frontend).
+-   This project was worked on by a team of four individuals, with each member contributing to different aspects. I was responsible for the backend development.
 
-![Demo_Gif](./assets/animations/GrabPencil_Demo-ezgif.com-video-to-gif-converter.gif)
+-   Initial Prototype Demo:
+![Demo_Gif](./assets/animations/advanced%20smoke%20detector%20demo.gif)
 
 ## Description
 
-GrabPencil is a **tutor matching website tailored for students** at [Simon Fraser University](https://en.wikipedia.org/wiki/Simon_Fraser_University) and the [University of British Columbia](https://en.wikipedia.org/wiki/University_of_British_Columbia). Students can easily create **tutor profiles** similar to LinkedIn, allowing others to view their information at a glance. The platform includes a built-in **chat system** for quick and easy communication, enabling users to freely connect with tutors that match their preferences. Additionally, GrabPencil encompasses Indeed-like **filter and search features** for enhanced user experience.
+Advanced Smoke Detector is a **multi-purpose fire and gas detector designed to mitigate false alarms** commonly triggered by modern detectors. Inspired by personal experiences of inconvenience caused by false fire alarms, the system integrates **multiple sensors**, including TMP36 for temperature, MQ-2 for flammable gas and smoke, MQ-7 for carbon monoxide (CO), MQ-135 for other harmful gases, and TCRT5000 infrared (IR) light sensor. These sensors are connected to a BeagleBone board, where multi-threaded functions written in C continuously sample, calculate, and display readings. By analyzing sensor data, the system determines whether to issue warnings or full alarms, ensuring accurate detection of hazards. Additionally, an IR sensor monitors obstructions and alerts users accordingly. Alarms and warnings are displayed through the terminal and LED matrix, enhancing user awareness and safety.
 
 -   What was your motivation? <br/> <br/>
-    My motivation stemmed from observing my peers, friends, and even my girlfriend seeking tutoring opportunities. While existing tutor matching websites were available, they were saturated with a diverse range of tutors, making it challenging for students to stand out and for users to filter through student tutors. I aimed to create a platform that simplifies this process, allowing students to showcase their tutoring capabilities more effectively and making it easier for users to connect with suitable tutors.
+    My motivation stemmed from personal experiences of enduring false alarms during cooking and baking, which often led to inconvenience and, at times, forced evacuations due to apartment procedures. These experiences inspired the creation of an advanced smoke detector and gas sensor, aiming to enhance safety and alleviate the disruptions caused by erroneous alarms.
 
 ## Table of Contents
 
--   [GrabPencil](#grabpencil)
 -   [Description](#description)
--   [Table of Contents](#table-of-contents)
 -   [Outline](#outline)
--   [Usage](#usage)
 -   [Features](#features)
 -   [Results and Discussion](#results-and-discussion)
     -   [Learning Experience](#learning-experience)
-        -   [Frontend-Backend Communication](#frontend-backend-communication)
-        -   [Database Integration](#database-integration)
+        -   [Server-Side Coding](#server-side-coding)
+        -   [BeagleBone Usage](#beaglebone-usage)
+        -   [Embedded Real-Time Software](#embedded-real-time-software)
+        -   [Multi-Threading](#multi-threading)
+        -   [Working with Different Sensors](#working-with-different-sensors)
     -   [Challenges Faced](#challenges-faced)
-        -   [Marketing Struggles](#marketing-struggles)
+        -   [Time Management and Task Division Challenges](#time-management-and-task-division-challenges)
     -   [Lesson Learned](#lesson-learned)
-    -   [Conclusion](#conclusion)
--   [Credits](#credits)
+    -   [Credits](#credits)
 -   [License](#license)
 -   [Badges](#badges)
 -   [How to Contribute](#how-to-contribute)
 
 ## Outline
 
--   Written in [JavaScript](https://en.wikipedia.org/wiki/JavaScript).
--   Frontend developed using [React](<https://en.wikipedia.org/wiki/React_(software)>) with [Bootstrap](<https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)>).
--   Backend developed using [Node.js](https://en.wikipedia.org/wiki/Node.js) and [Express.js](https://en.wikipedia.org/wiki/Express.js).
--   Database built using [MongoDB](https://en.wikipedia.org/wiki/MongoDB) with [Mongoose](https://mongoosejs.com/).
--   Real-time connection with [Socket.IO](https://en.wikipedia.org/wiki/Socket.IO).
--   [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token)-based user authentication with password hashing using [bcrypt](https://en.wikipedia.org/wiki/Bcrypt).
--   Backend API endpoint testing using [Jest](https://jestjs.io/) and [Supertest](https://www.npmjs.com/package/supertest).
-
-## Usage
-
-Simply follow the link below and explore the platform!
-
--   [https://www.grabpencil.com/](https://www.grabpencil.com/)
+-   For prototyping, [Arudino](https://www.arduino.cc) was initially used.
+-   Incorporates [BeagleBone](https://www.beagleboard.org/boards/beaglebone-original) board as the central processing unit for the Multi-Purpose Fire & Gas Detector project.
+-   Sensor code written in [C](https://en.wikipedia.org/wiki/C_(programming_language)#:~:text=C%20is%20an%20imperative%20procedural,all%20with%20minimal%20runtime%20support.) utilizing [multi-threaded](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)#:~:text=In%20computer%20architecture%2C%20multithreading%20is,This%20approach%20differs%20from%20multiprocessing.) functions.
+-   Backend code written in [JavaScript](https://en.wikipedia.org/wiki/JavaScript) with [Node.js](https://nodejs.org/en) and [Express.js](https://expressjs.com).
+-   Incorporates multiple sensors including TMP36, MQ-2, MQ-7, MQ-135, and TCRT5000 infrared (IR) light sensor for measuring temperature, detecting flammable gas, smoke, carbon monoxide (CO), other harmful gases, and monitoring obstruction.
+-   Usage of LED matrix for displaying number of sensors gone off.
 
 ## Features
 
--   [x] Account
+Warning & Alarm Features
+![System Flowchart](./assets/images/system%20flowchart.png)
 
-    -   [x] Login / Logout
-    -   [x] Sign up
-    -   [x] Add profile picture
-    -   [x] Delete account
-    -   [x] Edit account information
+Displaying live warnings and alarams via LED Matrix and Website
+![LED Matrix](./assets/images/device.png)
+![Website for Live Readings](./assets/images/website%20for%20live%20readings.png) 
 
--   [x] Tutor profile
 
-    -   [x] Create tutor profile
-    -   [x] Edit tutor profile
-    -   [x] Delete tutor profile
-
--   [x] User
-
-    -   [x] Search profiles
-    -   [x] Filter profiles
-    -   [x] Real-time chatting
-    -   [x] Real-time online user status
-
--   [ ] Design
-    -   [x] Pagination
-    -   [ ] Update about page
-    -   [ ] Responsive design
 
 ## Results and Discussion
 
 ### Learning Experience
 
-#### Frontend-Backend Communication
+#### Server-Side Coding
 
-Developing GrabPencil provided a valuable learning experience in understanding how frontend and backend components communicate via RESTful APIs. The clear separation of concerns between the frontend (React) and the backend (Node.js with Express) allowed for a modular and scalable architecture. Learning to design and implement RESTful APIs facilitated efficient data transfer and communication between the client and server.
+Our project involved setting up a server for displaying live sensor readings and issuing alarms or warnings to users via email. This experience familiarized us with server-side coding practices, including implementing APIs, handling client-server communication, and managing data transmission between embedded systems and online servers.
 
-#### Database Integration
+#### BeagleBone Usage
 
-Integrating MongoDB as the database backend further enhanced my understanding of data storage and retrieval in the context of a web application. The flexibility of MongoDB's document-oriented structure proved beneficial in managing various data types associated with user profiles, tutoring sessions, and other relevant information.
+Our project provided invaluable insights into the practical application of BeagleBone in embedded real-time software development. By leveraging BeagleBone's capabilities as a versatile development platform, we were able to interface with multiple sensors, process sensor data in real-time, and execute complex multi-threaded functions efficiently.
+
+#### Embedded Real-Time Software
+
+Working with BeagleBone taught us the intricacies of developing embedded real-time software systems. We gained hands-on experience in writing C code optimized for real-time processing, ensuring timely data acquisition, analysis, and response to sensor inputs.
+
+#### Multi-Threading
+
+The implementation of multi-threaded functions on BeagleBone enabled concurrent execution of tasks, enhancing system performance and responsiveness. Through careful synchronization and resource management, we effectively utilized BeagleBone's multi-core architecture to handle sensor data processing efficiently.
+
+#### Working with Different Sensors
+
+Integrating various sensors into our project broadened our understanding of sensor technologies and their applications in real-world scenarios. By working with sensors such as TMP36, MQ-2, MQ-7, MQ-135, and TCRT5000, we gained practical insights into sensor selection, calibration, and data interpretation, enriching our knowledge of sensor-based systems.
 
 ### Challenges Faced
 
-#### Marketing Struggles
+#### Time Management and Task Division Challenges
 
-While the technical aspects of the project were successfully implemented, one of the most significant challenges faced was in the realm of marketing. Despite efforts such as posting on Reddit to generate awareness and interest, acquiring users proved to be a formidable task.
+As this project marked our first venture into embedded software development, managing time effectively and dividing tasks efficiently presented notable challenges. Navigating the learning curve associated with embedded systems required careful planning and coordination to ensure timely completion of tasks and project milestones. Despite these challenges, our team successfully collaborated and adapted our approach, ultimately enhancing our skills in project management and teamwork.
 
 ### Lesson Learned
 
-The realization that effective marketing is essential for the success of a tech project cannot be understated. It highlighted the importance of not only developing a functional and user-friendly application but also actively promoting it to the target audience.
-
-### Conclusion
-
-The GrabPencil project provided a comprehensive learning experience in full-stack development, emphasizing the intricacies of frontend-backend communication and database integration within the MERN stack. The challenges faced in marketing underscored the importance of a well-rounded approach, where technical proficiency must be complemented by strategic promotional efforts.
+Our experience with the Multi-Purpose Fire & Gas Detector project taught us valuable lessons in perseverance, adaptability, and teamwork. We learned to navigate new technological challenges by working together efficiently and remaining flexible in our approach. Through this journey, we not only enhanced our technical skills but also gained a deeper understanding of the iterative nature of innovation. Overall, the project underscored the importance of hands-on experience and collaborative problem-solving in real-world engineering endeavors.
 
 ## Credits
 
--   This was a solo, full-stack project.
+-   This project was a collaborative effort involving a team of four individuals, each contributing to different aspects of the development and implementation: Robert Truong, Aneel Badesha, Kesley Rana, and Jaehong Lee. 
 
--   The UI/UX was inspired by [Indeed.com](https://ca.indeed.com/) and [LinkedIn](https://www.linkedin.com/feed/).
+-   Credit is attributed to the referenced document titled "[TMP36 Temperature Sensor Guide for BeagleBone Green](https://opencoursehub.cs.sfu.ca/bfraser/grav-cms/cmpt433/links/files/2022-student-howtos/TMP36TemperatureSensor.pdf)" for providing guidance and inspiration in the creation of this TMP36 Temperature Sensor Guide for BeagleBone Green.
 
--   Backend practices were learned and implemented following this [tutorial](https://www.udemy.com/course/the-complete-nodejs-developer-course-2/).
-
--   <a href="https://www.flaticon.com/free-animated-icons/pencil" title="pencil animated icons">Pencil animated icons created by Freepik - Flaticon</a>
+-   <a href="https://giphy.com/gifs/regalmovies-minions-breaking-despicable-me-eImrJKnOmuBDmqXNUj" title="Breaking Despicable Me GIF By Regal">PBreaking Despicable Me GIF By Regal</a>
 
 ## License
 
@@ -133,15 +114,15 @@ This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE.
 ## Badges
 
 -   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
--   ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
--   ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 -   ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 -   ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
--   ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
--   ![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io&badgeColor=010101)
--   ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
--   ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
--   ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)
+-   ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+-   ![BeagleBone](https://img.shields.io/badge/BeagleBone-%2342C02E.svg?style=for-the-badge&logo=BeagleBone&logoColor=white)
+-   ![TMP36](https://img.shields.io/badge/TMP36-FF0000.svg?style=for-the-badge&logoColor=white)
+-   ![MQ-2](https://img.shields.io/badge/MQ--2-orange?style=for-the-badge&logoColor=white)
+-   ![MQ-7](https://img.shields.io/badge/MQ--7-yellow?style=for-the-badge&logoColor=white)
+-   ![MQ-135](https://img.shields.io/badge/MQ--135-blue?style=for-the-badge&logoColor=white)
+-   ![TCRT5000](https://img.shields.io/badge/TCRT5000-%23F7931E.svg?style=for-the-badge&logo=arduino&logoColor=white)
 
 ## How to Contribute
 
